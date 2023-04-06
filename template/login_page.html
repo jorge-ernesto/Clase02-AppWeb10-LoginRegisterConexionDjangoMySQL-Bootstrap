@@ -1,0 +1,34 @@
+<html>
+    {% load static %}
+<head>
+    <title>Página de registro</title>
+
+   <link href="{% static '/login.css' %}" rel="stylesheet" type="text/css"/>
+
+</head>
+
+<body>
+    <center>
+        <h2>Acceso al Sistema</h2>
+    </center>
+    <form action="#" method="post">
+        {% csrf_token %}
+       
+        <center>
+            <div class="container">
+                <div class="imgcontainer">
+                    <img src="{% static 'avatar_img1.jpg' %}" alt="Avatar" class="avatar">
+                </div>
+                <label for='email'><b>Email : </b></label>
+                <input type="email" placeholder="Ingrese Email" name="email" float="right" required><br>
+                <label for='password'><b>Password : </b></label>
+                <input type="password" placeholder="Ingrese Password" name="password" required><br>
+                <button type="submit"><b>Login</b></button><br><br>
+                
+                No tengo una cuenta <a href="http://localhost:8000/signup/"> Registrar </a>
+            </div>
+        </center>
+    </form>
+</body>
+
+</html>
