@@ -1,12 +1,12 @@
 from django.shortcuts import render
-import mysql.connector as sql  #pip instalar mysql-conector-python
-#import sqlite3
+import mysql.connector as sql  # pip install mysql-connector-python  # Usamos conexion del modulo mysql-connector-python
+# import sqlite3
 
 # Create your views here.
-# cn = sqlite3.connect("db.sqlite3)
 
 def signaction(request):
     if request.method == "POST":
+        # cn = sqlite3.connect("db.sqlite3)
         cn = sql.connect(host="localhost", user="root",passwd="root",database='bdatos')
         x = cn.cursor()
         
@@ -29,4 +29,3 @@ def signaction(request):
         cn.commit()
 
     return render(request, 'signup_page.html')
-

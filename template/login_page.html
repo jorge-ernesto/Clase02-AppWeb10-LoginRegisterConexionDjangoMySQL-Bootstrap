@@ -1,10 +1,12 @@
-<html>
-    {% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
 <head>
+    <!-- Cargamos archivos estaticos -->
+    {% load static %}
+
     <title>Página de registro</title>
-
-   <link href="{% static '/login.css' %}" rel="stylesheet" type="text/css"/>
-
+    <link href="{% static '/login.css' %}" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -13,7 +15,7 @@
     </center>
     <form action="#" method="post">
         {% csrf_token %}
-       
+
         <center>
             <div class="container">
                 <div class="imgcontainer">
@@ -24,7 +26,7 @@
                 <label for='password'><b>Password : </b></label>
                 <input type="password" placeholder="Ingrese Password" name="password" required><br>
                 <button type="submit"><b>Login</b></button><br><br>
-                
+
                 No tengo una cuenta <a href="http://localhost:8000/signup/"> Registrar </a>
             </div>
         </center>

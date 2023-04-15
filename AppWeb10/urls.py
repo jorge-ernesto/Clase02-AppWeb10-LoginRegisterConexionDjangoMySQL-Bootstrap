@@ -18,11 +18,18 @@ from django.urls import path
 from signup.views import signaction
 from login.views import loginaction
 
+# Otro forma
+# from signup import views as views_signup
+# from login import views as views_login
+
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('signup/',signaction),
-    path('login/',loginaction),
-    #path('login/',include("login.urls")),
-    #path('signup/',include("signup.urls")),
-]
+    path('signup/', signaction),
+    path('login/' , loginaction),
+    # path('login/' , include("login.urls")),
+    # path('signup/', include("signup.urls")),
 
+    # Otra forma
+    # path('admin', views_signup.signaction),
+    # path('admin', views_login.loginaction),
+]
