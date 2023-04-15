@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'login',
     'signup',
-
 ]
 
 MIDDLEWARE = [
@@ -57,7 +56,7 @@ ROOT_URLCONF = 'AppWeb10.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['template'], #
+        'DIRS': ['template'],  # Cambiamos ruta de templates, si no se especifica busca dentro de cada app en la carpeta "templates"
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
